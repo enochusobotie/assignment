@@ -1,145 +1,224 @@
-body {
+
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #111;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #08080c;
     color: white;
+    font-family: Arial, sans-serif;
+    padding: 25px;
 }
 
 header {
-    background-color: black;
-    padding: 15px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
-header i, span {
-    color: gold;
+.logo {
+    font-size: 32px;
+    letter-spacing: 5px;
 }
 
-header a {
-    color: white;
-    text-decoration: none;
+.logo span,
+h1 span {
+    color: #c28aff;
 }
 
-header a:hover {
-    color: gold;
+header p {
+    color: #c28aff;
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-top: 8px;
 }
 
 .hero {
+    background: #14111b;
+    border: 1px solid #7546a1;
+    border-radius: 20px;
+    padding: 35px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 40px 20px;
-    background-color: #201800;
-    gap: 25px;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.text {
-    width: 40%;
+.content {
+    flex: 1;
 }
 
-.text h1 {
-    font-size: 40px;
-}
-
-.small {
-    color: gold;
+.offer {
+    color: #d2a5ff;
     letter-spacing: 2px;
+    font-size: 12px;
+    margin-bottom: 20px;
 }
 
-.old {
-    color: #999;
-    text-decoration: line-through;
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-.price {
-    color: gold;
+.content h2 {
+    color: #c28aff;
+    margin: 25px 0 12px;
 }
 
-.image {
-    width: 40%;
-    text-align: center;
+.content p {
+    line-height: 1.7;
 }
 
-.image img {
+.product {
+    flex: 1;
+}
+
+.product img {
     width: 100%;
+    max-width: 400px;
     border-radius: 15px;
+    display: block;
+    margin: auto;
 }
 
-.image h3 {
-    color: gold;
-}
-
-.btn {
+.button {
     display: inline-block;
-    background-color: gold;
-    color: black;
-    padding: 12px 20px;
-    border-radius: 20px;
+    background: #c28aff;
+    color: #100b17;
+    padding: 16px 25px;
+    border-radius: 30px;
     text-decoration: none;
-    margin-top: 10px;
+    font-weight: bold;
+    margin-top: 25px;
 }
 
-.btn:hover {
-    background-color: white;
-}
-
-.about {
-    text-align: center;
-    padding: 30px 10px;
+.button:hover {
+    background: white;
 }
 
 .features {
     display: flex;
     justify-content: space-around;
-}
-
-.features i {
-    color: gold;
-    font-size: 25px;
-}
-
-.thankyou {
+    gap: 20px;
     text-align: center;
-    padding: 100px 15px;
-    background-color: #1b1608;
-    min-height: 250px;
+    margin: 35px 0;
+    padding: 25px;
+    background: #14111b;
+    border-radius: 15px;
 }
 
-.thankyou > i {
-    color: gold;
-    font-size: 50px;
+.features div {
+    color: #c28aff;
 }
 
-.thankyou h1 {
-    font-size: 40px;
+.features p {
+    color: white;
+    margin-top: 10px;
 }
 
 footer {
-    background-color: black;
     text-align: center;
+    color: #aaa;
+    font-size: 12px;
+    margin-top: 40px;
+}
+
+/* THANK YOU PAGE */
+
+.thanks-page {
+    text-align: center;
+}
+
+.thanks-card {
+    max-width: 600px;
+    margin: auto;
+    padding: 40px 25px;
+    border: 1px solid #c28aff;
+    border-radius: 20px;
+    background: #14111b;
+    line-height: 1.8;
+}
+.thumb{
+    font-size: 40px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #c28aff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.thanks-card h1 {
+    font-size: 38px;
+}
+
+.thanks-card h3 {
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.message {
+    border-top: 1px solid #443052;
+    border-bottom: 1px solid #443052;
+    margin-top: 25px;
     padding: 20px;
+    color: #c28aff;
 }
 
-footer a {
-    color: gold;
-    font-size: 22px;
-    margin: 10px;
+.message p {
+    color: white;
 }
 
-@media (max-width: 600px) {
+.signature {
+    margin-top: 25px;
+    color: #c28aff;
+    font-style: italic;
+}
+
+/* PHONE SCREEN */
+
+@media (max-width: 650px) {
+    body {
+        padding: 15px;
+    }
+
     .hero {
         flex-direction: column;
         text-align: center;
+        padding: 25px;
     }
 
-    .text, .image {
-        width: 90%;
+    h1 {
+        font-size: 38px;
     }
 
-    .text h1 {
+    .product img {
+        max-width: 100%;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .thanks-card h1 {
         font-size: 32px;
     }
+}
+.sale{
+    background-color: #6911bc;
+    color: #aaa;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+
 }
