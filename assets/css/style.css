@@ -39,7 +39,9 @@ header p {
     border: 1px solid #7546a1;
     border-radius: 20px;
     padding: 35px;
-    display: flex;
+    display: inline-block;
+    position: relative;
+    left: 400px;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
